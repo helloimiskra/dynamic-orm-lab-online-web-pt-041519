@@ -58,6 +58,7 @@ class InteractiveRecord
       sql = "SELECT * FROM #{self.table_name} WHERE '#{k}' = '#{v}'"
       DB[:conn].execute(sql)
     end
+    hash
   end
 
 end
