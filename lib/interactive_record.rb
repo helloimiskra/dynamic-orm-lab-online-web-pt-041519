@@ -55,7 +55,7 @@ class InteractiveRecord
 
   def self.find_by(hash)
     # hash.each_pair do |k, v|
-    sql = "SELECT * FROM #{self.table_name} WHERE '#{hash[k]}' = '#{v}'"
+    sql = "SELECT * FROM #{self.table_name} WHERE 'hash[#{k}]' = '#{v}'"
     DB[:conn].execute(sql)
   end
 
