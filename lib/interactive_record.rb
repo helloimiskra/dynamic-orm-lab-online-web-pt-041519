@@ -53,7 +53,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by(attr)
+  def self.find_by(attr: value)
     sql = "SELECT * FROM #{self.table_name} WHERE '#{attr}' = ?"
     DB[:conn].execute(sql, attr)
   end
